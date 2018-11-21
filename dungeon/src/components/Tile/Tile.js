@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
-import './Tile';
+import './Tile.css';
 
 class Tile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
     }
   }
 
   render() {
     return (
-      <div>Tile</div>
+      <div className="tile-container">{this.props.id}</div>
     )
   }
 }

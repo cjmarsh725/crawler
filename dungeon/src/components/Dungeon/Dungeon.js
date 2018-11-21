@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import './Dungeon';
+import './Dungeon.css';
 import dungeonGen from '../../scripts/dungeonGen.js';
+import Tile from '../Tile/Tile.js'
 
 class Dungeon extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Dungeon extends Component {
 
   render() {
     return (
-      <div>{this.state.map.map(x => <div>{x.join(" ")}</div>)}</div>
+      <div>{this.state.map.map(x => <div className="viewRow">{x.map(y => <Tile id={y} />)}</div>)}</div>
     )
   }
 }

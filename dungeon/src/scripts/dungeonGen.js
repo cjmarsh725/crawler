@@ -82,7 +82,9 @@ const createMapData = (rooms) => {
     if (room.y + room.height > maxY) maxY = room.y + room.height + 1;
     if (room.y < minY) minY = room.y;
   });
+
   const gameMap = Array(maxX - minX + 1).fill(0).map(x => Array(maxY - minY + 1).fill(0));
+  
   rooms.forEach(room => {
     for (let i = room.x - minX; i <= room.x2 - minX; i++ )
     for (let j = room.y - minY; j <= room.y2 - minY; j++)
