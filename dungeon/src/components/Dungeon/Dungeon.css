@@ -1,3 +1,10 @@
-.viewRow {
+.dungeon-container {
+  width: 416;
+  height: "416px";
+  margin: auto;
+  background-color: red;
   display: flex;
+}
+
+.viewRow {
 }

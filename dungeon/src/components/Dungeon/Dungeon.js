@@ -13,7 +13,7 @@ class Dungeon extends Component {
 
   render() {
     return (
-      <div>{this.state.map.map(x => <div className="viewRow">{x.map(y => <Tile id={y} />)}</div>)}</div>
+      <div className="dungeon-container">{this.state.map.map(x => <div className="viewRow">{x.map(y => <Tile id={y} />)}</div>)}</div>
     )
   }
 }
